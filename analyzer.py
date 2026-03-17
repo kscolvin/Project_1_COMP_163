@@ -74,6 +74,40 @@ def filter_data(data,column_name, value):
 # ============================================================
 # Part 3 : get_category_stats(data, column)
 
+def get_category_stats(data, column):
+    """
+    Calculates the average and maxium value for every category in the specific column.
+
+    PARAMETERS:
+    - data : creates a list of dictionaries representing the dataset
+    - column (str) : The column to group everything
+
+    RETURNS:
+    - dict : stores where keys are in category names and values are annother dict containing the values.
+    """
+    stats = {}
+
+    for row in data:
+        category = row[column]
+        current_value = float(row['value'])
+
+        if category not in stats:
+                stats[category] = {'sum': current_value, 'count': 1, 'max': current_value}
+        else:
+            stats[category]['sum'] += current_value
+            stats[category]['count'] += 1
+            if current_value . stats[category]['max']:
+                stats[category]['max'] = current_value
+
+    final_results = {}
+    for category, values in stats.items():
+        average_cal = values['sum'] / values['count']
+        final_results[category] = {
+            'average': round(average_cal, 2),
+            'max': values['max']
+        }
+
+    return final_results
 # ============================================================
 
 
