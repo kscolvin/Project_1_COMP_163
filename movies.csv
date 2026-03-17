@@ -1,0 +1,51 @@
+title,year,genre,rating,value
+The Shawshank Redemption,1994,Drama,9.3,16.0
+The Godfather,1972,Crime,9.2,134.9
+The Dark Knight,2008,Action,9.0,1004.6
+Schindler's List,1993,Drama,8.9,321.2
+Pulp Fiction,1994,Crime,8.9,213.9
+The Lord of the Rings: The Return of the King,2003,Fantasy,8.9,1141.7
+Forrest Gump,1994,Drama,8.8,678.2
+Inception,2010,Sci-Fi,8.8,836.8
+The Matrix,1999,Sci-Fi,8.7,463.5
+Goodfellas,1990,Crime,8.7,46.8
+Interstellar,2014,Sci-Fi,8.6,701.8
+The Silence of the Lambs,1991,Thriller,8.6,272.7
+Saving Private Ryan,1998,Drama,8.6,482.3
+The Green Mile,1999,Drama,8.6,286.8
+The Lion King,1994,Animation,8.5,987.5
+Gladiator,2000,Action,8.5,460.6
+The Departed,2006,Crime,8.5,290.5
+Whiplash,2014,Drama,8.5,49.0
+The Prestige,2006,Thriller,8.5,109.7
+Avengers: Infinity War,2018,Action,8.4,2048.4
+Spider-Man: Into the Spider-Verse,2018,Animation,8.4,384.3
+Django Unchained,2012,Western,8.4,425.4
+WALL-E,2008,Animation,8.4,521.3
+The Dark Knight Rises,2012,Action,8.4,1084.9
+Parasite,2019,Thriller,8.5,258.8
+Gran Torino,2008,Drama,8.2,148.1
+Inglourious Basterds,2009,Action,8.3,321.5
+Up,2009,Animation,8.2,735.1
+Toy Story 3,2010,Animation,8.3,1067.0
+Mad Max: Fury Road,2015,Action,8.1,374.7
+La La Land,2016,Drama,8.0,446.1
+Get Out,2017,Horror,7.7,255.4
+The Revenant,2015,Drama,8.0,533.0
+Gone Girl,2014,Thriller,8.1,369.3
+Prisoners,2013,Thriller,8.1,122.1
+The Wolf of Wall Street,2013,Drama,8.2,392.0
+Gravity,2013,Sci-Fi,7.7,723.2
+Her,2013,Sci-Fi,8.0,48.0
+Moonlight,2016,Drama,7.4,65.3
+Arrival,2016,Sci-Fi,7.9,203.4
+Baby Driver,2017,Action,7.6,226.9
+John Wick,2014,Action,7.4,88.4
+Knives Out,2019,Mystery,7.9,312.9
+1917,2019,Drama,8.3,384.7
+Ford v Ferrari,2019,Drama,8.1,225.5
+Once Upon a Time in Hollywood,2019,Drama,7.6,374.3
+Joker,2019,Drama,8.4,1079.4
+Everything Everywhere All at Once,2022,Sci-Fi,7.8,103.9
+Top Gun Maverick,2022,Action,8.3,1493.6
+The Batman,2022,Action,7.8,770.8

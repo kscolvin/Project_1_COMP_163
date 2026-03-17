@@ -1,0 +1,284 @@
+{
+  "tests": [
+    {
+      "name": "load_data: returns a list",
+      "setup": "",
+      "run": "pytest test_analyzer.py::TestLoadData::test_returns_list -v",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 2
+    },
+    {
+      "name": "load_data: list is not empty",
+      "setup": "",
+      "run": "pytest test_analyzer.py::TestLoadData::test_list_is_not_empty -v",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 2
+    },
+    {
+      "name": "load_data: records are dicts",
+      "setup": "",
+      "run": "pytest test_analyzer.py::TestLoadData::test_records_are_dicts -v",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 2
+    },
+    {
+      "name": "load_data: required columns present",
+      "setup": "",
+      "run": "pytest test_analyzer.py::TestLoadData::test_required_columns_present -v",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 2
+    },
+    {
+      "name": "filter_data: returns correct rows",
+      "setup": "",
+      "run": "pytest test_analyzer.py::TestFilterData::test_returns_correct_rows -v",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 2
+    },
+    {
+      "name": "filter_data: no extra rows returned",
+      "setup": "",
+      "run": "pytest test_analyzer.py::TestFilterData::test_no_extra_rows -v",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 2
+    },
+    {
+      "name": "filter_data: works on any column",
+      "setup": "",
+      "run": "pytest test_analyzer.py::TestFilterData::test_filter_by_year -v",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 2
+    },
+    {
+      "name": "filter_data: no match returns empty list",
+      "setup": "",
+      "run": "pytest test_analyzer.py::TestFilterData::test_no_match_returns_empty_list -v",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 2
+    },
+    {
+      "name": "get_category_stats: returns three values",
+      "setup": "",
+      "run": "pytest test_analyzer.py::TestGetCategoryStats::test_returns_three_values -v",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 2
+    },
+    {
+      "name": "get_category_stats: correct minimum",
+      "setup": "",
+      "run": "pytest test_analyzer.py::TestGetCategoryStats::test_correct_minimum -v",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 2
+    },
+    {
+      "name": "get_category_stats: correct maximum",
+      "setup": "",
+      "run": "pytest test_analyzer.py::TestGetCategoryStats::test_correct_maximum -v",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 2
+    },
+    {
+      "name": "get_category_stats: correct average",
+      "setup": "",
+      "run": "pytest test_analyzer.py::TestGetCategoryStats::test_correct_average -v",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 2
+    },
+    {
+      "name": "summarize: returns a dictionary",
+      "setup": "",
+      "run": "pytest test_analyzer.py::TestSummarize::test_returns_dict -v",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 2
+    },
+    {
+      "name": "summarize: correct total records",
+      "setup": "",
+      "run": "pytest test_analyzer.py::TestSummarize::test_total_records -v",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 2
+    },
+    {
+      "name": "summarize: correct unique genres",
+      "setup": "",
+      "run": "pytest test_analyzer.py::TestSummarize::test_unique_genres -v",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 2
+    },
+    {
+      "name": "summarize: correct average rating",
+      "setup": "",
+      "run": "pytest test_analyzer.py::TestSummarize::test_average_rating -v",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 2
+    },
+    {
+      "name": "display_summary: runs without error",
+      "setup": "",
+      "run": "pytest test_analyzer.py::TestDisplaySummary::test_runs_without_error -v",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 2
+    },
+    {
+      "name": "display_summary: produces output",
+      "setup": "",
+      "run": "pytest test_analyzer.py::TestDisplaySummary::test_produces_output -v",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 2
+    },
+    {
+      "name": "display_summary: returns None",
+      "setup": "",
+      "run": "pytest test_analyzer.py::TestDisplaySummary::test_returns_none -v",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 2
+    },
+    {
+      "name": "generate_insights: returns a list",
+      "setup": "",
+      "run": "pytest test_analyzer.py::TestGenerateInsights::test_returns_list -v",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 2
+    },
+    {
+      "name": "generate_insights: at least three insights",
+      "setup": "",
+      "run": "pytest test_analyzer.py::TestGenerateInsights::test_at_least_three_insights -v",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 2
+    },
+    {
+      "name": "generate_insights: insights are strings",
+      "setup": "",
+      "run": "pytest test_analyzer.py::TestGenerateInsights::test_insights_are_strings -v",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 2
+    },
+    {
+      "name": "generate_insights: insights are not empty",
+      "setup": "",
+      "run": "pytest test_analyzer.py::TestGenerateInsights::test_insights_are_not_empty -v",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "export_report: file is created",
+      "setup": "",
+      "run": "pytest test_analyzer.py::TestExportReport::test_file_is_created -v",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 2
+    },
+    {
+      "name": "export_report: file is not empty",
+      "setup": "",
+      "run": "pytest test_analyzer.py::TestExportReport::test_file_is_not_empty -v",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 2
+    },
+    {
+      "name": "export_report: known data appears in report",
+      "setup": "",
+      "run": "pytest test_analyzer.py::TestExportReport::test_known_title_in_report -v",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 2
+    },
+    {
+      "name": "export_report: default top_n includes correct entries",
+      "setup": "",
+      "run": "pytest test_analyzer.py::TestExportReport::test_default_top_n -v",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 2
+    },
+    {
+      "name": "export_report: custom top_n is respected",
+      "setup": "",
+      "run": "pytest test_analyzer.py::TestExportReport::test_custom_top_n -v",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 2
+    }
+  ]
+}
