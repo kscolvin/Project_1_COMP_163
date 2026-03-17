@@ -6,7 +6,7 @@ DATASET = "videogames.csv" # Change to your chosen dataset
 
 """
 COMP 163 - Introduction to Programming
-Assignment: Chapter 7 - Course Schedule Formatter
+Assignment: Project - Video Game Analyzer
 Name: Kennedi Colvin
 GitHub Username: Kscolvin
 Date: 03/16/2026
