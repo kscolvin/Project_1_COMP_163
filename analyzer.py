@@ -83,31 +83,18 @@ def get_category_stats(data, column):
     - column (str) : The column to group everything
 
     RETURNS:
-    - dict : stores where keys are in category names and values are annother dict containing the values.
+    - tuple : (min, max, average) rounded to 2 decimal places
     """
-    stats = {}
+    if not data:
+        return (0.0, 0.0, 0.0)
+    
+    values = [float(row[column]) for row in data]
 
-    for row in data:
-        category = row[column]
-        current_value = float(row['value'])
+    min_val = min(values)
+    max_val = max(values)
+    avg_val = sum(values) / len(values)
 
-        if category not in stats:
-                stats[category] = {'sum': current_value, 'count': 1, 'max': current_value}
-        else:
-            stats[category]['sum'] += current_value
-            stats[category]['count'] += 1
-            if current_value . stats[category]['max']:
-                stats[category]['max'] = current_value
-
-    final_results = {}
-    for category, values in stats.items():
-        average_cal = values['sum'] / values['count']
-        final_results[category] = {
-            'average': round(average_cal, 2),
-            'max': values['max']
-        }
-
-    return final_results
+    return (round(min_val, 2), round(max_val, 2), round(avg_val, 2))
 # ============================================================
 
 
