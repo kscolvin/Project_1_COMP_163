@@ -27,6 +27,6 @@ jobs:
         run: pip install pytest
 
       - name: Run autograding
-        uses: github-classroom/autograding@v1
+        uses: education/autograding@v1
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
