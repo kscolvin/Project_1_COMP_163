@@ -21,14 +21,15 @@ AI Usage: I used AI to assist with breaking down the problem into manageable ste
 import csv
 
 def load_data(filepath):
+
     """
-    Reads the dataset from the specified filepath and returns it as a list of dictionaries, where each dictionary represents a row of data with column names as keys.
+    Reads the dataset from the specified filepath and returns it as a list of dictionaries, where each dictionary represents a row of data with column names as keys
 
     PARAMETERS:
-    - str filepath: The path to the CSV file containing the dataset.
+    - str filepath : The path to the CSV file containing the dataset
 
     RETURNS:
-    - list of dict: A list of dictionaries representing the dataset, where each dictionary corresponds to a row of data with column names as keys.
+    - list of dict : A list of dictionaries representing the dataset, where each dictionary corresponds to a row of data with column names as keys
     """ 
     data_list = []
 
@@ -47,7 +48,25 @@ def load_data(filepath):
 # ============================================================
 # Part 2 : filter_data(data, column_name, value)
 
+def filter_data(data,column_name, value):
+    """
+    Filters the list of dictionaries to find the matching values for column_name
+    
+    PARAMETERS:
+    - data : creates a list of dictionaries representing the dataset
+    - column_name (str) : String for the specific column header to search
+    - value (str) : the value to search for inside the column
+    RETURNS:
+    - creates a new list containing only the dictionaries that match the defined criteria
+    """
+    filtered_results = []
 
+    for row in data:
+
+        if row[column_name] == value:
+            filtered_results.append(row)
+    
+    return filtered_results
 # ============================================================
 
 
