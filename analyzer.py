@@ -15,12 +15,31 @@ AI Usage: I used AI to assist with breaking down the problem into manageable ste
 """
 # ============================================================
 
-import analyzer
-
 # ============================================================
 # Part 1 : load_data(filepath)
 
+import csv
 
+def load_data(filepath):
+    """
+    Reads the dataset from the specified filepath and returns it as a list of dictionaries, where each dictionary represents a row of data with column names as keys.
+
+    PARAMETERS:
+    - str filepath: The path to the CSV file containing the dataset.
+
+    RETURNS:
+    - list of dict: A list of dictionaries representing the dataset, where each dictionary corresponds to a row of data with column names as keys.
+    """ 
+    data_list = []
+
+    with open(filepath, mode='r', encoding='utf-8') as file:
+
+        reader = csv.DictReader(file)
+
+        for row in reader:
+            data_list.append(row)
+
+    return data_list
 # ============================================================
 
 
