@@ -218,5 +218,25 @@ def export_report(data, output_filepath, num_entries=5):
 # ============================================================
 # Part 8 : main()
 
+def main():
+    """
+    Ties the program together.
+    """
 
+    filename = 'videogames.csv' 
+
+    print(f"--- Starting Analysis for {filename} ---")
+
+    dataset = load_data(filename)
+    
+    display_summary(dataset)
+    
+    # Exports final report as a text file 
+    output_file = filename.replace('.csv', '_report.txt')
+    export_report(dataset, output_file)
+    
+    print(f"Done! Analysis saved to {output_file}")
+
+if __name__ == "__main__":
+    main()
 # ============================================================
