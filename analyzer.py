@@ -169,7 +169,35 @@ def display_summary(data):
 # ============================================================
 # Part 6 : generate_insights(data)
 
+def generate_insights(data):
+    """
+    Analyzes the data and returns 3 meaningful conclusions as strings.
+    """
+    if not data:
+        return ["No data available."]
 
+    insights = []
+
+    # Insight 1: Highest Rated Entry (Most Popular)
+    # Find the dictionary with the highest rating value
+    best_item = max(data, key=lambda x: float(x['rating']))
+    insights.append(f"Quality Leader: '{best_item['title']}' is the highest-rated entry in the dataset with a score of {best_item['rating']}.")
+
+    # Insight 2: Value Threshold (Finacial Success)
+    # Counting how many items exceeded a specific 'value' 
+    threshold = 100
+    high_value_count = len([r for r in data if float(r['value']) > threshold])
+    insights.append(f"Commercial Success: {high_value_count} entries have exceeded a value of {threshold}, showing strong market performance.")
+
+    # Insight 3: Era Analysis (Retro vs. Modern)
+    # Count to see if the dataset favors older or newer entries
+    modern_count = len([r for r in data if int(r['year']) >= 2015])
+    if modern_count > (len(data) / 2):
+        insights.append(f"Trend: The dataset is majority 'Modern' (released 2015 or later), suggesting a focus on current trends.")
+    else:
+        insights.append(f"Trend: The dataset features a significant number of 'Retro' entries, providing a historical perspective.")
+
+    return insights
 # ============================================================
 
 
@@ -186,7 +214,7 @@ def export_report(data, output_filepath, top_n=5):
     output_filepath (str): The path where the .txt report will be saved.
     top_n (int): The number of top-rated entries to include (default is 5).
     """
-    
+
     # Get the overall summary metrics
     summary = summarize(data)
     
