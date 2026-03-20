@@ -177,7 +177,7 @@ def display_summary(data):
 # ============================================================
 # Part 7 : export_report(data, output_filepath, top_n=5)
 
-def export_report(data, output_filepath, top_n=5):
+def export_report(data, output_filepath, num_entries=5):
     """
     Writes a formatted data analysis report to a text file.
     
@@ -204,12 +204,11 @@ def export_report(data, output_filepath, top_n=5):
         report_file.write(f"Unique Genres: {summary['unique_genres']}\n")
         report_file.write(f"Average Rating: {summary['average_rating']}\n\n")
 
-        report_file.write(f"--- TOP {top_n} RATED ENTRIES ---\n")
-        for entry in top_entries:
+        report_file.write(f"--- FIRST {num_entries} RATED ENTRIES ---\n")
+        for entry in selected_entries:
             report_file.write(f"- {entry['title']} ({entry['year']}) | Rating: {entry['rating']}\n")
 
         report_file.write("\n--- GENERATED INSIGHTS ---\n")
-
         report_file.write("The dataset has been successfully processed and exported.\n")
         report_file.write("================================\n")
 # ============================================================
