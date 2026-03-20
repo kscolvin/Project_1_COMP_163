@@ -189,8 +189,8 @@ def generate_insights(data):
 
     # Insight 2: Value Threshold (Finacial Success)
     # Counting how many items exceeded a specific 'value' 
-    threshold = 100
-    high_value_count = len([r for r in data if float(r['value']) > threshold])
+    max_value = 100
+    high_value_count = len([r for r in data if float(r['value']) > max_value])
     insights.append(f"Commercial Success: {high_value_count} entries have exceeded a value of {threshold}, showing strong market performance.")
 
     # Insight 3: Era Analysis (Retro vs. Modern)
