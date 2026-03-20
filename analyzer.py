@@ -102,7 +102,41 @@ def get_category_stats(data, column):
 # ============================================================
 # Part 4 : summarize(data)
 
+def summarize(data):
+    """
+    Summarizes the dataset by printing the min, max, and average 
+    values for every unique genre found in the data.
+    
+    Parameters:
+   - data : A list of dictionaries representing the dataset.
+    """
 
+    if not data:
+        return {
+            "total_records": 0,
+            "unique_genres": 0,
+            "average_rating": 0.0
+        }
+
+    total_records = len(data)
+
+    unique_gnere_list = []
+    for row in data:
+        if row['genre'] not in unique_gnere_list:
+            unique_gnere_list.append(row['genre'])
+
+    num_unique_genres = len(unique_gnere_list)
+
+    all_ratings = [float(row['rating']) for row in data]
+    avg_rating = sum(all_ratings) / total_records
+
+    summary_report = {
+        "total_records": total_records,
+        "unique_genres": num_unique_genres,
+        "average_rating": round(avg_rating, 2)
+    }
+
+    return summary_report 
 # ============================================================
 
 
@@ -110,7 +144,25 @@ def get_category_stats(data, column):
 # ============================================================
 # Part 5 : display_summary(data)
 
+def display_summary(data):
+    """
+    Prints a formatted summary of the dataset to the console.
+    
+    Parameters:
+    data (list): A list of dictionaries representing the dataset.
+    """
 
+    report = summarize(data)
+
+    print("================================")
+    print("    DATASET ANALYSIS SUMMARY    ")
+    print("================================")
+
+    print(f"Total Number of Records: {report['total_records']}")
+    print(f"Number of Unique Genres: {report['unique_genres']}")
+    print(f"Average Rating: {report['average_rating']}")
+
+    print("================================")
 # ============================================================
 
 
@@ -124,6 +176,7 @@ def get_category_stats(data, column):
 
 # ============================================================
 # Part 7 : export_report(data, output_filepath, top_n=5)
+
 
 
 # ============================================================
