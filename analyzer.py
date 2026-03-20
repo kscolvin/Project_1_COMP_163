@@ -177,8 +177,41 @@ def display_summary(data):
 # ============================================================
 # Part 7 : export_report(data, output_filepath, top_n=5)
 
+def export_report(data, output_filepath, top_n=5):
+    """
+    Writes a formatted data analysis report to a text file.
+    
+    Parameters:
+    - data : A list of dictionaries representing the dataset.
+    -  output_filepath (str): The path where the .txt report will be saved.
+    - top_n (int): The number of top-rated entries to include (default is 5).
+    """
 
+    summary = summarize(data)
 
+    # Selects entries from the dataset 
+    selected_entries = data[:num_entries]
+
+    # writing out the file with the 'with' statement 
+    with open(output_filepath, mode='w', encoding='utf-8') as report_file:
+        report_file.write("================================\n")
+        report_file.write("   PROJECT 1: ANALYSIS REPORT   \n")
+        report_file.write("================================\n\n")
+
+        # Overal Summary Code
+        report_file.write("--- OVERALL SUMMARY ---\n")
+        report_file.write(f"Total Records: {summary['total_records']}\n")
+        report_file.write(f"Unique Genres: {summary['unique_genres']}\n")
+        report_file.write(f"Average Rating: {summary['average_rating']}\n\n")
+
+        report_file.write(f"--- TOP {top_n} RATED ENTRIES ---\n")
+        for entry in top_entries:
+            report_file.write(f"- {entry['title']} ({entry['year']}) | Rating: {entry['rating']}\n")
+
+        report_file.write("\n--- GENERATED INSIGHTS ---\n")
+
+        report_file.write("The dataset has been successfully processed and exported.\n")
+        report_file.write("================================\n")
 # ============================================================
 
 
