@@ -31,6 +31,8 @@ def load_data(filepath):
     RETURNS:
     - list of dict : A list of dictionaries representing the dataset, where each dictionary corresponds to a row of data with column names as keys
     """ 
+
+    # Datalist from the video game csv file.
     data_list = []
 
     with open(filepath, mode='r', encoding='utf-8') as file:
@@ -59,6 +61,8 @@ def filter_data(data,column_name, value):
     RETURNS:
     - creates a new list containing only the dictionaries that match the defined criteria
     """
+
+    # Filtering results from input dict.
     filtered_results = []
 
     for row in data:
@@ -90,6 +94,7 @@ def get_category_stats(data, column):
     
     values = [float(row[column]) for row in data]
 
+    # Variables for min, max, and the avg of them
     min_val = min(values)
     max_val = max(values)
     avg_val = sum(values) / len(values)
@@ -130,6 +135,7 @@ def summarize(data):
     all_ratings = [float(row['rating']) for row in data]
     avg_rating = sum(all_ratings) / total_records
 
+    # Full summary report 
     summary_report = {
         "total_records": total_records,
         "unique_genres": num_unique_genres,
@@ -154,6 +160,7 @@ def display_summary(data):
 
     report = summarize(data)
 
+    # Display Setup
     print("================================")
     print("    DATASET ANALYSIS SUMMARY    ")
     print("================================")
