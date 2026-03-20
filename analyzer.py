@@ -180,7 +180,11 @@ def generate_insights(data):
 
     # Insight 1: Highest Rated Entry (Most Popular)
     # Find the dictionary with the highest rating value
-    best_item = max(data, key=lambda x: float(x['rating']))
+    best_item = None
+
+    for item in data:
+        if best_item is None or float(item['rating']) > float(best_item['rating']):
+            best_item = item
     insights.append(f"Quality Leader: '{best_item['title']}' is the highest-rated entry in the dataset with a score of {best_item['rating']}.")
 
     # Insight 2: Value Threshold (Finacial Success)
